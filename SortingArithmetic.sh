@@ -6,3 +6,4 @@ read -p "enter the value of c:" c
 echo "$a $b $c"
 uc2=$(($a+($b*$c)))
 uc3=$((($a*$b)+$c))
+uc4=$(($c +($a/b)))
