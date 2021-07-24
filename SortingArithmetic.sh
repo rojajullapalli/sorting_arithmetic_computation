@@ -19,4 +19,6 @@ do
   array[i]=${arithmetic[uc$((i+1))]}
 done
 echo "${array[@]}"
-
+# desending order
+a=`printf '%s\n' "${array[@]}" | sort -nr`
+echo $a
