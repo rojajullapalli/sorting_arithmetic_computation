@@ -13,3 +13,10 @@ arithmetic[uc2]="$uc2"
 arithmetic[uc3]="$uc3"
 arithmetic[uc4]="$uc4"
 arithmetic[uc5]="$uc5"
+# Read dictionary value in to a array
+for((i=0; i<=${#arithmetic[@]}; i++))
+do
+  array[i]=${arithmetic[uc$((i+1))]}
+done
+echo "${array[@]}"
+
