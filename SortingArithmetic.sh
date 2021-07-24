@@ -9,7 +9,13 @@ uc3=$((($a*$b)+$c))
 uc4=$(($c +($a/$b)))
 uc5=$((($a%$b)+$c))
 declare -A arithmetic
-arithmetic[1]="$uc2"
-arithmetic[2]="$uc3"
-arithmetic[3]="$uc4"
-arithmetic[4]="$uc5"
+arithmetic[uc2]="$uc2"
+arithmetic[uc3]="$uc3"
+arithmetic[uc4]="$uc4"
+arithmetic[uc5]="$uc5"
+# Read dictionary value in to a array
+for((i=0; i<=${#arithmetic[@]}; i++))
+do
+  array[i]=${arithmetic[uc$((i+1))]}
+done
+echo "${array[@]}"
